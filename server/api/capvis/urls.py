@@ -4,6 +4,8 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    url(r'^matching_list', views.matches, name='matching_list'),
-    url(r'^captioning_list', views.captions, name='captioning_list')
+    url(r'^matching_list/$', views.matches, name='matching_list'),
+    url(r'^captioning_list/$', views.captions, name='captioning_list'),
+    url(r'^captioning/$', views.get_cap, name='captioning'),
+    url(r'^matching/$', views.get_match, name='matching')
 ]
